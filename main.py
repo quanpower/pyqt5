@@ -8,7 +8,7 @@
 import sys
 from PyQt5 import QtCore, QtGui, QtWidgets
 
-from PyQt5.QtWidgets import QMainWindow, QAction, qApp, QMenu, QApplication
+from PyQt5.QtWidgets import QMainWindow, QAction, qApp, QMenu, QApplication, QGridLayout
 from PyQt5.QtGui import QIcon
 from PyQt5.QtCore import Qt
 from form import *
@@ -45,7 +45,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
-
+        self.grid = QGridLayout()
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
@@ -69,6 +69,8 @@ class Ui_MainWindow(object):
         
         if e.key() == Qt.Key_Escape:
             self.close()
+
+
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
